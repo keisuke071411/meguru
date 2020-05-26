@@ -1,0 +1,187 @@
+h1 {
+  width: 30%;
+  margin: 50px auto 0;
+  background: black;
+  color: #fff;/*文字色*/
+  border: solid 4px #fff;/*線色*/
+  padding: 0.5em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角丸*/
+  text-align: center;
+}
+
+.answer-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 70px 0 30px 0;
+}
+
+.answer-title:after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; 
+}
+
+.answer-txt {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  border: 0.1px solid rgba(70, 70, 70, 1);
+  box-shadow: 5px 5px 10px rgba(200, 200, 200);
+  background: rgba(200, 200, 200, 0.3);
+  height: 20px;
+  color: #fff;
+}
+
+.btn {
+  color: #fff;
+  box-shadow: 2px 2px 5px orange;
+  background: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+/* この立方体は回を六面につけた形のものです */
+.square {
+    width: 200px;
+    height: 200px;
+    border:5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .square2 {
+    width: 100px;
+    height: 100px;
+    border:5px solid red;
+ }
+
+ /* ここで立方体にする */
+ #cube {
+   margin: 150px 0 0 0;
+    perspective: 1000px;
+    width:200px;
+    height:200px;
+    position:relative;
+    top:10vh;
+    left:50vw;
+    transform:translateX(-50%) translateY(-50%);
+  }
+  .boxBase {
+    transform-style:preserve-3d;
+    width:200px;
+    height:200px;
+    /* ここの秒数をいじると回転する速度が変わるよ */
+    animation: turnAround 4s linear 0s infinite normal none running;
+  }
+  @keyframes turnAround {
+    0%{
+      transform:rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+      transform:rotateX(360deg) rotateY(360deg);
+    }
+  }
+  .boxBase > div {
+    position:absolute;
+    border:5px solid red;
+  }
+  .boxBase > .top {
+    transform:translateY(100px) rotateX(-90deg);
+  }
+  .boxBase > .bottom {
+    transform:translateY(-100px) rotateX(90deg);
+  }
+  .boxBase > .front {
+    transform:translateZ(100px);
+  }
+  .boxBase > .back {
+    transform:translateZ(-100px) rotateX(180deg);
+  }
+  .boxBase > .left {
+    transform:translateX(-100px) rotateY(-90deg);
+  }
+  .boxBase > .right {
+    transform:translateX(100px) rotateY(90deg);
+  }
+  
+.hidelink2 {
+   text-decoration: none;  /* リンクの下線を消す */
+   color: black;           /* 文字色を黒色にする */
+   cursor: text;           /* マウスポインタの形状をテキスト選択用にする */
+}
+
+.hint_box {
+  margin: 200px auto 0;
+}
+
+.special {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.special:after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; 
+}
+
+.hint {
+  width: 350px;
+  height: 70px;
+  background: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  box-shadow: 1px 1px 10px orange;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70px;
+  user-select: none;
+}
+
+.question_box {
+  padding: 100px;
+}
+
+.question {
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+}
+
+.question:after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
